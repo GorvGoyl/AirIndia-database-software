@@ -1,5 +1,5 @@
-[Software Engineer Intern: Air India Airline Company,Palam Airport, Delhi, June 2014]
-[Mentor: GM Mukesh Sareen]
+[Software Engineer Intern: Air India Airline Company,Palam Airport, Delhi, June 2014]<br>
+[Mentor: GM Mukesh Sareen]<br>
 
 This is a standalone database software for ‘Air India IT department’ which saves, modifies and searches through
 various records related to passengers detail held by various air stations.
