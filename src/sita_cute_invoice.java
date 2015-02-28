@@ -1,18 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
- * sita_cute_invoice.java
- *
- * Created on Jul 31, 2014, 6:11:58 PM
- */
-/**
- *
- * @author:- Gourav Goyal @1gouravgg@gmail.com
- */
-
 
 //import com.sun.istack.internal.logging.Logger;
 import java.sql.*;
@@ -117,36 +102,7 @@ String sql = "select * from airindia_sqlite";
     }
 
 
-/*
-//COMBO BUTTON SELECTION //
-private void Fillcombo(){
-   try{
-String sql = "select * from airindia_sqlite";
-pst=conn.prepareStatement(sql); // u have to write these 2 lines after String sql = "select * from sita_cute";
-rs=pst.executeQuery();
-while(rs.next()){
-    String billing = rs.getString("BILLING"); //shows whatever u write inside of " "
-    ComboBox_name.addItem (billing);
 
-}
-
-        }
-        catch (Exception e){
-            JOptionPane.showMessageDialog(null, e);
-            
-                       
-        }
-   finally{ //to solve database locked problem
-        try{
-            rs.close();
-            pst.close();
-        }
-    catch(Exception e){
-    
-    } 
-}
-}
-*/
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -731,22 +687,22 @@ while(rs.next()){
         setBounds((screenSize.width-1105)/2, (screenSize.height-707)/2, 1105, 707);
     }// </editor-fold>//GEN-END:initComponents
 
-private void txt_stationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_stationActionPerformed
+private void txt_stationActionPerformed(java.awt.event.ActionEvent evt) {
 
 }//GEN-LAST:event_txt_stationActionPerformed
 
-private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
 close();
     
 }//GEN-LAST:event_jMenuItem2ActionPerformed
 // TO SAVE A RECORD //// open JFrame from a Click  //
-private void txt_newActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_newActionPerformed
+private void txt_newActionPerformed(java.awt.event.ActionEvent evt) {
 user_info s = new user_info(); //making new object of JFrame
 s.setVisible(true);
     
 }//GEN-LAST:event_txt_newActionPerformed
 // TO DELETE A RECORD BASED ON INDEX(PK)  //// TO EDIT A RECORD
-private void Table_airindiaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Table_airindiaKeyPressed
+private void Table_airindiaKeyPressed(java.awt.event.KeyEvent evt) {
 
 }//GEN-LAST:event_Table_airindiaKeyPressed
 
@@ -757,7 +713,7 @@ private void Table_airindiaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:
 
 
 // TO SELECT A RECORD BY CLICKING ON TABLE //
-private void Table_airindiaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table_airindiaMouseClicked
+private void Table_airindiaMouseClicked(java.awt.event.MouseEvent evt) {
 
     try{
 int row = Table_airindia.getSelectedRow();
@@ -802,9 +758,9 @@ if(rs.next()){
     
     } }
     
-}//GEN-LAST:event_Table_airindiaMouseClicked
-// TO FILL TEXTFIELDS WHEN SELECTING FROM COMBOBOX ////to show selected value in TextField when Key UP or DOWN//
-private void Table_airindiaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Table_airindiaKeyReleased
+}
+//to show selected value in TextField when Key UP or DOWN//
+private void Table_airindiaKeyReleased(java.awt.event.KeyEvent evt) {
 if (evt.getKeyCode()==KeyEvent.VK_DOWN ||evt.getKeyCode()==KeyEvent.VK_UP )
 {
     
@@ -854,9 +810,9 @@ if(rs.next()){
     
     } }
 }
-}//GEN-LAST:event_Table_airindiaKeyReleased
-// TO CLEAR ALL TEXTFIELDS //// TO GRAPH SEARCH //
-private void txt_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchKeyReleased
+}
+// TO GRAPH SEARCH //
+private void txt_searchKeyReleased(java.awt.event.KeyEvent evt) {
 try{
 String sql="select * from airindia_sqlite where INDX=?";
 pst=conn.prepareStatement(sql);
@@ -1185,7 +1141,7 @@ finally{ //to solve database locked problem, write it after each QUERY
 
 }//GEN-LAST:event_txt_searchKeyReleased
 // TO EXIT ALL WINDOWS //// TO PRINT THE TABLE //
-private void cmd_printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_printActionPerformed
+private void cmd_printActionPerformed(java.awt.event.ActionEvent evt) {
 
     MessageFormat header= new MessageFormat("Report Print");
 MessageFormat footer= new MessageFormat("Page{0,number,integer}");
@@ -1198,21 +1154,21 @@ Table_airindia.print(JTable.PrintMode.NORMAL,header,footer);
             
                           
     		 }
-}//GEN-LAST:event_cmd_printActionPerformed
+}
 // TO CLEAR FIELDS WHEN PRESS BACKSPACE IN SEARCH //
-private void txt_searchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchKeyPressed
+private void txt_searchKeyPressed(java.awt.event.KeyEvent evt) {
 clear();
-}//GEN-LAST:event_txt_searchKeyPressed
+}
 
-private void txt_billing2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_billing2ActionPerformed
+private void txt_billing2ActionPerformed(java.awt.event.ActionEvent evt) {
 // TODO add your handling code here:
-}//GEN-LAST:event_txt_billing2ActionPerformed
+}
 
-private void txt_station2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_station2ActionPerformed
+private void txt_station2ActionPerformed(java.awt.event.ActionEvent evt) {
 // TODO add your handling code here:
-}//GEN-LAST:event_txt_station2ActionPerformed
+}
 // TO ADVANCED SEARCH //
-private void cmd_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_searchActionPerformed
+private void cmd_searchActionPerformed(java.awt.event.ActionEvent evt) {
 
     String val1=txt_billing2.getText();
     String val2=txt_station2.getText();
@@ -1290,32 +1246,32 @@ if (!txt_umonth2.getText().equals("")) {
     
 }//GEN-LAST:event_cmd_searchActionPerformed
 
-private void cmd_clear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_clear2ActionPerformed
+private void cmd_clear2ActionPerformed(java.awt.event.ActionEvent evt) {
 Update_table();
 }//GEN-LAST:event_cmd_clear2ActionPerformed
 
-private void txt_indxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_indxActionPerformed
+private void txt_indxActionPerformed(java.awt.event.ActionEvent evt) {
 // TODO add your handling code here:
 }//GEN-LAST:event_txt_indxActionPerformed
 
-private void txt_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_searchActionPerformed
+private void txt_searchActionPerformed(java.awt.event.ActionEvent evt) {
 // TODO add your handling code here:
 }//GEN-LAST:event_txt_searchActionPerformed
 
-private void txt_amonth2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_amonth2ActionPerformed
+private void txt_amonth2ActionPerformed(java.awt.event.ActionEvent evt) {
 // TODO add your handling code here:
 }//GEN-LAST:event_txt_amonth2ActionPerformed
 
-private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
                txt_billing2.setText("");
                txt_station2.setText("");
                txt_amonth2.setText("");
                txt_umonth2.setText("");
                txt_invoice2.setText("");
 
-}//GEN-LAST:event_jButton1ActionPerformed
+}
 
-private void cmd_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_saveActionPerformed
+private void cmd_saveActionPerformed(java.awt.event.ActionEvent evt) {
 try{
     String sql="Insert into airindia_sqlite ('BILLING','STATION','INVOICE','ACTIVITY MONTH','USAGE MONTH','PAX CLAIMED','PAX REPORTED BY AAI') values (?,?,?,?,?,?,?)";
 pst=conn.prepareStatement(sql);  //codes to save the data into DataBase from textfields
@@ -1362,9 +1318,9 @@ JDialog dialog=optionpane.createDialog(null,"Below values have been saved:-");
     txt_pax_claimed.setText("");
     txt_pax_reported.setText("");
     
-}//GEN-LAST:event_cmd_saveActionPerformed
-
-private void cmd_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_deleteActionPerformed
+}
+//DELETE ROW FROM DB
+private void cmd_deleteActionPerformed(java.awt.event.ActionEvent evt) {
 
 String val1=txt_billing.getText();
 String val2=txt_station.getText();
@@ -1402,9 +1358,9 @@ pst.execute();
                txt_pax_reported.setText("");
 }
         }
-}//GEN-LAST:event_cmd_deleteActionPerformed
-
-private void cmd_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_updateActionPerformed
+}
+//UPDATE ROW IN DB
+private void cmd_updateActionPerformed(java.awt.event.ActionEvent evt) {
 try{
 String value1= txt_indx.getText();
 String value2= txt_billing.getText();
@@ -1434,9 +1390,9 @@ JOptionPane.showMessageDialog(null, "Table Edited");
     		 }
     
     Update_table();  // to refresh values after saving in table  //
-}//GEN-LAST:event_cmd_updateActionPerformed
+}
 
-private void cmd_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_clearActionPerformed
+private void cmd_clearActionPerformed(java.awt.event.ActionEvent evt) {
 
                txt_indx.setText("");
                txt_billing.setText("");
@@ -1446,13 +1402,13 @@ private void cmd_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                txt_usage_month.setText("");
                txt_pax_claimed.setText("");
                txt_pax_reported.setText("");
-}//GEN-LAST:event_cmd_clearActionPerformed
+}
 
-private void cmd_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_exitActionPerformed
+private void cmd_exitActionPerformed(java.awt.event.ActionEvent evt) {
 close();
-}//GEN-LAST:event_cmd_exitActionPerformed
+}
 
-private void cmd_saveKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmd_saveKeyPressed
+private void cmd_saveKeyPressed(java.awt.event.KeyEvent evt) {
 if(evt.getKeyCode()==KeyEvent.VK_ENTER){
     try{
     String sql="Insert into airindia_sqlite ('BILLING','STATION','INVOICE','ACTIVITY MONTH','USAGE MONTH','PAX CLAIMED','PAX REPORTED BY AAI') values (?,?,?,?,?,?,?)";
@@ -1499,9 +1455,9 @@ JDialog dialog=optionpane.createDialog(null,"Below values have been saved:-");
     Update_table();  // to refresh values after saving in table  //
 
 }
-}//GEN-LAST:event_cmd_saveKeyPressed
+}
 
-private void cmd_clearKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmd_clearKeyPressed
+private void cmd_clearKeyPressed(java.awt.event.KeyEvent evt) {
 if(evt.getKeyCode()==KeyEvent.VK_ENTER){
     
                txt_indx.setText("");
@@ -1513,9 +1469,9 @@ if(evt.getKeyCode()==KeyEvent.VK_ENTER){
                txt_pax_claimed.setText("");
                txt_pax_reported.setText("");
 }
-}//GEN-LAST:event_cmd_clearKeyPressed
+}
 
-private void cmd_updateKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmd_updateKeyPressed
+private void cmd_updateKeyPressed(java.awt.event.KeyEvent evt) {
 if(evt.getKeyCode()==KeyEvent.VK_ENTER){
     try{
 String value1= txt_indx.getText();
@@ -1549,7 +1505,7 @@ JOptionPane.showMessageDialog(null, "Table Edited");
 }
 }//GEN-LAST:event_cmd_updateKeyPressed
 
-private void cmd_deleteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmd_deleteKeyPressed
+private void cmd_deleteKeyPressed(java.awt.event.KeyEvent evt) {
 if(evt.getKeyCode()==KeyEvent.VK_ENTER){
     
 String val1=txt_billing.getText();
@@ -1583,7 +1539,7 @@ pst.execute();
 }
 }//GEN-LAST:event_cmd_deleteKeyPressed
 
-private void cmd_searchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmd_searchKeyPressed
+private void cmd_searchKeyPressed(java.awt.event.KeyEvent evt) {
 if(evt.getKeyCode()==KeyEvent.VK_ENTER){
     
     String val1=txt_billing2.getText();
@@ -1660,9 +1616,9 @@ if (!txt_umonth2.getText().equals("")) {
     }
     }
 }
-}//GEN-LAST:event_cmd_searchKeyPressed
+}
 
-private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
+private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {
 if(evt.getKeyCode()==KeyEvent.VK_ENTER){
        txt_billing2.setText("");
                txt_station2.setText("");
@@ -1670,13 +1626,13 @@ if(evt.getKeyCode()==KeyEvent.VK_ENTER){
                txt_umonth2.setText("");
                txt_invoice2.setText("");
 }
-}//GEN-LAST:event_jButton1KeyPressed
+}
 
-private void cmd_clear2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmd_clear2KeyPressed
+private void cmd_clear2KeyPressed(java.awt.event.KeyEvent evt) {
 if(evt.getKeyCode()==KeyEvent.VK_ENTER){
     Update_table();
 }
-}//GEN-LAST:event_cmd_clear2KeyPressed
+}
 
     /**
      * @param args the command line arguments

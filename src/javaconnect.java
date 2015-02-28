@@ -1,12 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Jerry
- */
 import java.sql.*;
 import javax.swing.*;
 public class javaconnect {

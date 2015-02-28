@@ -1,17 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/*
- * Login_jframe.java
- *
- * Created on Jul 31, 2014, 5:01:57 PM
- */
-/**
- *
- * @author Jerry
- */
 import java.sql.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -139,17 +126,17 @@ PreparedStatement   pst = null;
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         setBounds((screenSize.width-384)/2, (screenSize.height-489)/2, 384, 489);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>
 
-private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed
+private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {
 // TODO add your handling code here:
-}//GEN-LAST:event_txt_usernameActionPerformed
+}
 
-private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
+private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {
 // TODO add your handling code here:
-}//GEN-LAST:event_txt_passwordActionPerformed
+}
 
-private void cmd_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_loginActionPerformed
+private void cmd_loginActionPerformed(java.awt.event.ActionEvent evt) {
 
     String sql = "select * from login where user = ? and password = ?";
 
@@ -187,9 +174,9 @@ finally{ //to solve database locked problem
     }
 }
 // TODO add your handling code here:
-}//GEN-LAST:event_cmd_loginActionPerformed
+}
 
-private void cmd_loginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmd_loginKeyPressed
+private void cmd_loginKeyPressed(java.awt.event.KeyEvent evt) {
 if(evt.getKeyCode()==KeyEvent.VK_ENTER){
      String sql = "select * from login where user = ? and password = ?";
 
@@ -228,7 +215,7 @@ finally{ //to solve database locked problem
 }
     
 }
-}//GEN-LAST:event_cmd_loginKeyPressed
+}
 
     /**
      * @param args the command line arguments
